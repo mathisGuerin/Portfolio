@@ -9,18 +9,12 @@
       <!-- <video class="Home-bgVideo" autoplay muted loop id="myVideo">
         <source src="../assets/bgVideo.mp4" type="video/mp4">
       </video> -->
-     <Menu class="Menu"></Menu>
     </div>
   </div>
 </template>
 
 <script>
-import Menu from '../components/Menu.vue'
 export default {
-  components: {
-    Menu
-  }
-
 };
 </script>
 
@@ -77,16 +71,6 @@ export default {
   height: 100%;
   width: auto; 
   object-fit: cover;
-}
-
-.Menu {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
 }
 </style>
 

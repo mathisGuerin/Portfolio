@@ -1,8 +1,19 @@
 <template>
   <div>
     <nuxt/>
+    <Menu class="Menu"> </Menu>
   </div>
 </template>
+
+<script>
+import Menu from '../components/Menu.vue'
+export default {
+  components: {
+    Menu
+  }
+};
+</script>
+
 
 <style>
 html {
@@ -48,6 +59,16 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.Menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
 }
 </style>
 
