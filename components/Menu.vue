@@ -1,10 +1,10 @@
 <template>
   <div>
-    <li> Accueil </li>
-    <li> A propos </li>
-    <li> Compétences </li>
-    <li> Exprériences </li>
-    <li> Contact </li>
+    <nuxt-link to="/">Accueil</nuxt-link>
+    <nuxt-link to="/about">A propos</nuxt-link>
+    <nuxt-link to="/skills">Compétences</nuxt-link>
+    <nuxt-link to="/experiences">Expériences</nuxt-link>
+    <nuxt-link to="/contact">Contact</nuxt-link>
   </div>
 </template>
 
@@ -17,13 +17,15 @@ export default {
 
 
 <style lang="scss" scoped>
-    li {
+    a {
         display: inline-block;
         list-style: none;
         padding: 15px 20px;
         font-size: 17px;
         cursor: pointer;
         transition: all ease-in-out 300ms;
+        color: white;
+        text-decoration: none;
 
         &:hover {
             background: rgba(0, 0, 0, 0.6);
