@@ -1,6 +1,6 @@
 <template>
   <div class="Skills">
-    <h1>Expériences</h1>
+    <h1>Compétences</h1>
     <div>
       <vue-easy-pie-chart
         :percent="85"
@@ -25,7 +25,7 @@
         <img class="Skills-logo" src="../assets/redux.png">
       </vue-easy-pie-chart>
       <vue-easy-pie-chart
-        :percent="50"
+        :percent="60"
         bar-color="#5bb984"
         track-color="#dedede"
         scale-color="white"
@@ -36,7 +36,7 @@
         <img class="Skills-logo" src="../assets/vue.png">
       </vue-easy-pie-chart>
       <vue-easy-pie-chart
-        :percent="60"
+        :percent="40"
         bar-color="#e45699"
         track-color="#dedede"
         scale-color="white"

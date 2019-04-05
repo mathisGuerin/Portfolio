@@ -34,6 +34,12 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ]
 }
 

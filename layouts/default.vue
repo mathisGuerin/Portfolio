@@ -16,8 +16,10 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
