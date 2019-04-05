@@ -28,7 +28,7 @@ export default {
         text-decoration: none;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
         }
     }
 </style>

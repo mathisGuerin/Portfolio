@@ -5,27 +5,25 @@
         <h1>Je suis Mathis Guérin</h1>
         <h2>Développeur front-end</h2>
       </div>
-      <img src="../assets/bgPhoto.jpeg"/>
       <!-- <video class="Home-bgVideo" autoplay muted loop id="myVideo">
         <source src="../assets/bgVideo.mp4" type="video/mp4">
-      </video> -->
+      </video>-->
     </div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-
 .Portfolio {
-  font-family: 'Open Sans', sans-serif;
   color: white;
+    background: url(/_nuxt/assets/bgPhoto.jpeg);
+    background-position: center left;
+    background-size: cover;
 }
 
 .Home-Container-top {
@@ -35,6 +33,7 @@ export default {
 }
 
 .Home-Presentation {
+  max-width: 80%;
   position: absolute;
   left: 0;
   right: 0;
@@ -42,9 +41,12 @@ export default {
   text-align: center;
   margin: 0 auto;
   padding: 30px 0 30px;
-  max-width: 960px;
   border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+
+  @media screen and (min-width: 1000px) {
+    max-width: 960px;
+  }
 
   h1 {
     font-size: 80px;
@@ -57,7 +59,7 @@ export default {
 
   h2 {
     font-size: 34px;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -66,10 +68,10 @@ export default {
   top: 0;
   left: 0;
   z-index: -1;
-  min-width: 100%; 
-  min-height: 100%; 
+  min-width: 100%;
+  min-height: 100%;
   height: 100%;
-  width: auto; 
+  width: auto;
   object-fit: cover;
 }
 </style>
