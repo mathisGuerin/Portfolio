@@ -10,19 +10,19 @@
           J'ai ensuite choisi de m'orienter vers le développement front-end.
         </div>
         <div class="About-description">
-          Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler sur un site grand public et de travailler 
+          Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler sur un site grand public et de travailler
           avec des technologies front-end récentes (React, Redux...)
         </div>
-        <div class="About-description">
-          Curieux et passionné, j'aime travailler sur des projets persos afin de me former sur d'autres technologies.
-        </div>
+        <div
+          class="About-description"
+        >Curieux et passionné, j'aime travailler sur des projets persos afin de me former sur d'autres technologies.</div>
       </div>
       <img class="About-picture" src="../assets/MathisGuerin.jpg">
       <div class="About-icons">
         <img class="About-icon About-icon-bretagne" src="../assets/bretagne.jpg">
-        <img class="About-icon " src="../assets/foot.png">
+        <img class="About-icon" src="../assets/foot.png">
         <img class="About-icon" src="../assets/travel.png">
-      </div>   
+      </div>
     </div>
   </div>
 </template>
@@ -43,14 +43,25 @@
     line-height: 90px;
     font-weight: 700;
     margin: 0px;
-    padding-bottom: 40px;
     text-transform: uppercase;
-    text-align: center;
+    position: relative;
+    width: fit-content;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 50%;
+      border-bottom: 5px solid white;
+      animation: appearBorder 2s;
+    }
   }
 
   h2 {
     font-size: 34px;
     font-weight: 400;
+    margin-top: 20px;
   }
 
   .About-picture {
@@ -86,7 +97,6 @@
     width: 100px;
     border-radius: 50%;
     border: 3px solid #444;
-    margin: 100px 0;
 
     &.About-icon-bretagne {
       padding: 10px;

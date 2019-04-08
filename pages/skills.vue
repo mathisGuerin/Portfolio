@@ -1,7 +1,7 @@
 <template>
   <div class="Skills">
     <h1>Compétences</h1>
-    <div>
+    <div class="Skills-wrapper">
       <vue-easy-pie-chart
         :percent="85"
         bar-color="#52d2fa"
@@ -98,17 +98,33 @@ export default {
   background-position: center left;
   background-size: cover;
   height: 100vh;
-  padding: 170px 50px 50px;
+  padding: 270px 50px 50px;
+  color: #292929;
+}
+
+.Skills-wrapper {
+  margin-top: 20px;
 }
 
 h1 {
+  position: relative;
   font-size: 80px;
   line-height: 90px;
   font-weight: 700;
   margin: 0px;
-  padding-bottom: 40px;
   text-transform: uppercase;
   text-align: left;
+  width: fit-content;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    border-bottom: 5px solid #292929;
+    animation: appearBorder 2s;
+  }
 }
 
 .Skills-logo {

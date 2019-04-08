@@ -17,6 +17,10 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/css/main.css'
+  ],
   /*
   ** Build configuration
   */
@@ -35,9 +39,6 @@ module.exports = {
       }
     }
   },
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
   plugins: [
     '~/plugins/fontawesome.js'
   ]

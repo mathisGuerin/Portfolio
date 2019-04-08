@@ -1,0 +1,9 @@
+/* Animation pour les titre des pages */
+@keyframes appearBorder {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 50%;
+  }
+}

@@ -27,18 +27,29 @@
   background-position: center left;
   background-size: cover;
   height: 100vh;
-  padding: 50px;
+  padding: 400px 50px 50px;
+color: #292929;
 }
 
 h1 {
+  position: relative;
   font-size: 80px;
   line-height: 90px;
   font-weight: 700;
   margin: 0px;
-  padding-bottom: 40px;
   text-transform: uppercase;
-  text-align: right;
-  color: #fbfdfc;
+  width: fit-content;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    border-bottom: 5px solid #292929;
+;
+    animation: appearBorder 2s;
+  }
 }
 
 .Contact-imgs {
