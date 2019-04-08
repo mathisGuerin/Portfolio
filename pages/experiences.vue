@@ -27,6 +27,20 @@ export default {
 .Experiences {
   height: 100vh;
   background: #ddd;
+  background: url("../assets/bgPhotoExperiences.jpeg");
+  background-position: center left;
+  background-size: cover;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 700;
+  margin: 0px;
+  padding: 150px 0 40px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .Experiences-wrapper {
@@ -35,8 +49,5 @@ export default {
   padding: 30px;
 }
 
-h1 {
-  text-align: center;
-  margin: 20px;
-}
+
 </style>
