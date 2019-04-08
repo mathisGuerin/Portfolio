@@ -10,13 +10,19 @@
           J'ai ensuite choisi de m'orienter vers le développement front-end.
         </div>
         <div class="About-description">
-          Mon expérience chez iDVROOM, site de covoiturage, m'a permis de mettre mes compétences ...
+          Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler sur un site grand public et de travailler 
+          avec des technologies front-end récentes (React, Redux...)
         </div>
         <div class="About-description">
-          En parallèle de mon expérience professionelle, je me forme sur d'autres technologies ...
+          Curieux et passionné, j'aime travailler sur des projets persos afin de me former sur d'autres technologies.
         </div>
       </div>
-      <img src="../assets/MathisGuerin.jpg">
+      <img class="About-picture" src="../assets/MathisGuerin.jpg">
+      <div class="About-icons">
+        <img class="About-icon About-icon-bretagne" src="../assets/bretagne.jpg">
+        <img class="About-icon " src="../assets/foot.png">
+        <img class="About-icon" src="../assets/travel.png">
+      </div>   
     </div>
   </div>
 </template>
@@ -47,9 +53,9 @@
     font-weight: 400;
   }
 
-  img {
+  .About-picture {
     display: inline-block;
-    height: 200px;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid #444;
     margin: 100px 0;
@@ -60,7 +66,7 @@
   }
 
   .About-description {
-    font-size: 18px;
+    font-size: 20px;
     margin: 20px 0;
   }
 
@@ -69,6 +75,23 @@
     width: 60%;
     margin: 20px;
     vertical-align: top;
+  }
+
+  .About-icons {
+    margin: 0 20px;
+  }
+
+  .About-icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    margin: 100px 0;
+
+    &.About-icon-bretagne {
+      padding: 10px;
+      background-color: white;
+    }
   }
 }
 </style>
