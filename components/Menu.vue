@@ -1,10 +1,6 @@
 <template>
   <div>
-    <nuxt-link to="/">Accueil</nuxt-link>
-    <nuxt-link to="/about">A propos</nuxt-link>
-    <nuxt-link to="/skills">Compétences</nuxt-link>
-    <nuxt-link to="/experiences">Expériences</nuxt-link>
-    <nuxt-link to="/contact">Contact</nuxt-link>
+    <nuxt-link to="/">Accueil</nuxt-link><nuxt-link to="/about">A propos</nuxt-link><nuxt-link to="/skills">Compétences</nuxt-link><nuxt-link to="/experiences">Expériences</nuxt-link><nuxt-link to="/contact">Contact</nuxt-link>
   </div>
 </template>
 
