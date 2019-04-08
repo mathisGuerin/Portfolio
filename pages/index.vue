@@ -3,16 +3,24 @@
     <div class="Home-Container-top">
       <div class="Home-Presentation">
         <h1>Je suis Mathis Guérin</h1>
-        <h2>Développeur front-end</h2>
+        <vue-typed-js :typeSpeed="100" :contentType="'null'" :strings="['< Développeur front-end />']">
+          <h2 class="typing"></h2>
+        </vue-typed-js>
       </div>
       <!-- <video class="Home-bgVideo" autoplay muted loop id="myVideo">
         <source src="../assets/bgVideo.mp4" type="video/mp4">
       </video>-->
+
     </div>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
+import VueTypedJs from "vue-typed-js";
+
+Vue.use(VueTypedJs);
+
 export default {};
 </script>
 
@@ -21,9 +29,9 @@ export default {};
 <style lang="scss" scoped>
 .Portfolio {
   color: white;
-    background: url('../assets/bgPhoto.jpeg');
-    background-position: center left;
-    background-size: cover;
+  background: url("../assets/bgPhoto.jpeg");
+  background-position: center left;
+  background-size: cover;
 }
 
 .Home-Container-top {
@@ -56,6 +64,10 @@ export default {};
     padding-bottom: 8px;
     text-transform: uppercase;
   }
+
+  .typed-element {
+    justify-content: center;
+  } 
 
   h2 {
     font-size: 34px;
