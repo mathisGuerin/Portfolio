@@ -21,7 +21,7 @@ export default {};
 <style lang="scss" scoped>
 .Portfolio {
   color: white;
-    background: url(/_nuxt/assets/bgPhoto.jpeg);
+    background: url('../assets/bgPhoto.jpeg');
     background-position: center left;
     background-size: cover;
 }
