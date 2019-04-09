@@ -1,5 +1,6 @@
 let experiences = [
   {
+    index: 0,
     title: 'Développeur front-end',
     company: 'iDVROOM',
     date: {
@@ -17,6 +18,7 @@ let experiences = [
     logo: require('../assets/idvroom.png')
   },
   {
+    index: 1,
     title: 'Contrat de professionnalisation',
     company: 'Sopra Stéria',
     date: {
@@ -33,6 +35,7 @@ let experiences = [
     logo: require('../assets/sopra.png')
   },
   {
+    index: 2,
     title: 'Stage M1',
     company: 'Sopra Stéria',
     date: {
