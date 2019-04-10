@@ -64,7 +64,20 @@ h1 {
 }
 
 .Contact-wrapper {
+  display: inline-block;
   margin: 30px 0 20px;
+  width: 100%;
+
+  @media screen and (min-width: 1000px) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 40%;
+  }
+  @media screen and (min-width: 1600px) {
+    width: 30%;
+  }
 }
 
 .Contact-item {
@@ -120,7 +133,7 @@ h2 {
 }
 
 .Contact-imgs {
-  text-align: center;
+  display: inline-block;
 }
 
 .Contact-img {
