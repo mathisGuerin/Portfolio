@@ -2,6 +2,9 @@
   <div class="About">
     <div class="About-container">
       <div class="About-container-left">
+        <img class="About-picture" src="../assets/MathisGuerin.jpg">
+      </div>
+      <div class="About-container-right">
         <h1>A propos</h1>
         <h2>Mathis Guérin, 24 ans</h2>
         <div class="About-description">
@@ -17,7 +20,6 @@
           class="About-description"
         >Curieux et passionné, j'aime travailler sur des projets persos afin de me former sur d'autres technologies.</div>
       </div>
-      <img class="About-picture" src="../assets/MathisGuerin.jpg">
       <div class="About-icons">
         <img class="About-icon About-icon-bretagne" src="../assets/bretagne.jpg">
         <img class="About-icon" src="../assets/foot.png">
@@ -31,12 +33,12 @@
 .About {
   font-family: "Open Sans", sans-serif;
   color: white;
-  background-color: #0c2233;
   height: 100vh;
   padding: 50px;
   background: url("../assets/bgPhotoAbout.jpeg");
   background-position: center left;
   background-size: cover;
+  color: #292929;
 
   h1 {
     font-size: 80px;
@@ -53,7 +55,7 @@
       bottom: 0;
       left: 0;
       right: 50%;
-      border-bottom: 5px solid white;
+      border-bottom: 5px solid #292929;
       animation: appearBorder 2s;
     }
   }
@@ -61,19 +63,25 @@
   h2 {
     font-size: 34px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 204px;
   }
 
   .About-picture {
-    display: inline-block;
+    display: block;
     height: 250px;
     border-radius: 50%;
     border: 3px solid #444;
-    margin: 100px 0;
+    margin: 100px auto;
   }
 
   .About-container {
-    width: 80%;
+    @media screen and (min-width: 1400px) {
+      margin: 0 100px;
+    }
+
+    @media screen and (min-width: 1500px) {
+      margin: 0 220px;
+    }
   }
 
   .About-description {
@@ -83,13 +91,16 @@
 
   .About-container-left {
     display: inline-block;
+    width: 39%;
+  }
+
+  .About-container-right {
+    display: inline-block;
     width: 60%;
-    margin: 20px;
-    vertical-align: top;
   }
 
   .About-icons {
-    margin: 0 20px;
+    margin: 20px 0 0 39%;
   }
 
   .About-icon {
