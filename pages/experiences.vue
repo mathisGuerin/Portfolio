@@ -56,8 +56,8 @@ export default {
       }
     },
     goto(index) {
-      this.direction = index > this.index ? 'right' : 'left' 
-      this.index = index
+      this.direction = index > this.index ? "right" : "left";
+      this.index = index;
     }
   },
   computed: {
@@ -144,7 +144,6 @@ h1 {
     border-radius: 50%;
     margin: 10px;
     transition: all ease-in-out 300ms;
-
 
     &.active {
       opacity: 1;

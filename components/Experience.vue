@@ -28,19 +28,19 @@ export default {
     visible() {
       return this.exp.index === this.$parent.index;
     },
-    transition () {
-      return 'slide-' + this.$parent.direction
+    transition() {
+      return "slide-" + this.$parent.direction;
     }
-
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .Experience {
-  margin: 15px 10px 40px;
-  display: inline-block;
+  margin: 15px auto;
+  display: block;
   max-width: 600px;
+  width: 80%;
 }
 
 .Experience-left,
@@ -50,11 +50,9 @@ export default {
 }
 
 .Experience-left {
-  width: 40%;
 }
 
 .Experience-right {
-  width: 59%;
 }
 
 .Experience-date {
@@ -70,11 +68,11 @@ export default {
 }
 
 .slide-right-enter-active {
-  animation: slideRightIn 2s;
+  animation: slideRightIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
 }
 
 .slide-right-leave-active {
-  animation: slideRightOut 2s;
+  animation: slideRightOut 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
   position: absolute;
   top: 0;
   left: 0;
@@ -83,27 +81,31 @@ export default {
 @keyframes slideRightIn {
   from {
     transform: translateX(100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideRightOut {
   from {
     transform: translateX(0);
+    opacity: 1;
   }
   to {
     transform: translateX(-100%);
+    opacity: 0;
   }
 }
 
 .slide-left-enter-active {
-  animation: slideLeftIn 1s;
+  animation: slideLeftIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
 }
 
 .slide-left-leave-active {
-  animation: slideLeftOut 1s;
+  animation: slideLeftOut 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
   position: absolute;
   top: 0;
   left: 0;
@@ -112,18 +114,22 @@ export default {
 @keyframes slideLeftIn {
   from {
     transform: translateX(-100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideLeftOut {
   from {
     transform: translateX(0);
+    opacity: 1;
   }
   to {
     transform: translateX(100%);
+    opacity: 0;
   }
 }
 </style>
