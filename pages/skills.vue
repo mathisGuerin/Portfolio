@@ -111,9 +111,9 @@
             >
               <img class="Skills-logo" src="../assets/react.png">
             </vue-easy-pie-chart>
-            <div class="Skill-description">
-              React est un framework front-end permettant la gestion de l'interface utilisateur.
-            </div>
+            <div
+              class="Skill-description"
+            >React est un framework front-end permettant la gestion de l'interface utilisateur.</div>
           </div>
         </transition>
         <transition name="skill">
@@ -132,7 +132,6 @@
             <div class="Skill-description">
               Redux permet la gestion de l'état (le state) de nos composants React.
               En centralisant le state de l'application dans un objet global (le store), il devient plus simple de prédire l'état du composant en fonction.
-            
             </div>
           </div>
         </transition>
@@ -151,8 +150,8 @@
               <img class="Skills-logo" src="../assets/vue.png">
             </vue-easy-pie-chart>
             <div class="Skill-description">
-              Vue.js est un framework front-end permettant la création d'interfaces utilisateurs.<br/>
-              Je n'ai jamais utilisé Vue.js dans un cadre professionel, mais j'ai créé plusieurs projets perso avec ce framework.
+              Vue.js est un framework front-end permettant la création d'interfaces utilisateurs.
+              <br>Je n'ai jamais utilisé Vue.js dans un cadre professionel, mais j'ai créé plusieurs projets perso avec ce framework.
             </div>
           </div>
         </transition>
@@ -170,9 +169,9 @@
             >
               <img class="Skills-logo" src="../assets/graphql.png">
             </vue-easy-pie-chart>
-            <div class="Skill-description">
-              GraphQL est un language de requête, permettant de récupérer des informations venant d'une API ou d'une base de données.
-            </div>
+            <div
+              class="Skill-description"
+            >GraphQL est un language de requête, permettant de récupérer des informations venant d'une API ou d'une base de données.</div>
           </div>
         </transition>
 
@@ -189,9 +188,9 @@
             >
               <img class="Skills-logo" src="../assets/html.png">
             </vue-easy-pie-chart>
-            <div class="Skill-description">
-              Le HTML est un language permettant de structurer une page web.
-            </div>
+            <div
+              class="Skill-description"
+            >Le HTML est un language permettant de structurer une page web.</div>
           </div>
         </transition>
 
@@ -210,7 +209,7 @@
             </vue-easy-pie-chart>
             <div class="Skill-description">
               Le CSS est un langage permettant de créer le style d'une page web.
-              En attribuant une classe à une balise HTML, on va pouvoir determiner le position, la taille, ou tout autre attribut visuel de cet élément. 
+              En attribuant une classe à une balise HTML, on va pouvoir determiner le position, la taille, ou tout autre attribut visuel de cet élément.
             </div>
           </div>
         </transition>
@@ -228,9 +227,9 @@
             >
               <img class="Skills-logo" src="../assets/node.png">
             </vue-easy-pie-chart>
-            <div class="Skill-description">
-              Node.js permet d'utiliser le Javascript pour créer un environnement côté serveur.
-            </div>
+            <div
+              class="Skill-description"
+            >Node.js permet d'utiliser le Javascript pour créer un environnement côté serveur.</div>
           </div>
         </transition>
       </div>
@@ -266,17 +265,25 @@ export default {
 
 <style lang="scss" scoped>
 .Skills {
-  background: url("../assets/bgPhotoSkills.jpeg");
-  background-position: center left;
-  background-size: cover;
-  height: 100vh;
-  padding: 240px 50px 50px;
+  background-color: #e7e7e7;
+
+  height: 100%;
+  min-height: 100vh;
+  padding: 50px;
   color: #292929;
   overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    background: url("../assets/bgPhotoSkills.jpeg");
+    background-position: center left;
+    background-size: cover;
+    padding: 240px 50px 50px;
+  }
 }
 
 .Skills-wrapper {
-  margin-top: 20px;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .Skill-wrapper {
@@ -284,7 +291,7 @@ export default {
 }
 
 .Skills-selected {
-  margin: 50px 20px;
+  margin: 50px 0px;
 
   .Skill-selected {
     width: fit-content;
@@ -306,8 +313,8 @@ export default {
 
 h1 {
   position: relative;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 46px;
+  line-height: 74px;
   font-weight: 700;
   margin: 0px;
   text-transform: uppercase;
@@ -323,6 +330,11 @@ h1 {
     border-bottom: 5px solid #292929;
     animation: appearBorder 2s;
   }
+
+  @media screen and (min-width: 700px) {
+    font-size: 80px;
+    line-height: 90px;
+  }
 }
 
 .Skills-logo {
@@ -333,12 +345,25 @@ h1 {
 
 .vue-easy-pie-chart {
   display: inline-block;
-  margin: 13px;
+  @media screen and (min-width: 1000px) {
+    margin: 13px;
+  }
 }
 
 // Animation des skills
 .Skills-transition {
   position: relative;
+  @media screen and (min-width: 600px) {
+    height: 835px;
+  }
+
+  @media screen and (min-width: 730px) {
+    height: 630px;
+  }
+
+  @media screen and (min-width: 920px) {
+    height: 540px;
+  }
 }
 
 .skills-enter-active {
@@ -389,7 +414,7 @@ h1 {
 .skill-leave-active {
   animation: skillOut 500ms cubic-bezier(0.49, 0.15, 0.51, 1.25);
   position: absolute;
-  top: 30px;
+  top: 0px;
   left: 0;
   right: 0;
 }
@@ -410,5 +435,4 @@ h1 {
     opacity: 0;
   }
 }
-
 </style>
