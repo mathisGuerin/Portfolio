@@ -33,16 +33,21 @@
 .About {
   font-family: "Open Sans", sans-serif;
   color: white;
-  height: 100vh;
-  padding: 50px;
-  background: url("../assets/bgPhotoAbout.jpeg");
-  background-position: center left;
-  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+  padding: 50px 50px 80px;
+  background-color: #e7e7e7;
   color: #292929;
 
+  @media screen and (min-width: 600px) {
+    background: url("../assets/bgPhotoAbout.jpeg");
+    background-position: center left;
+    background-size: cover;
+  }
+
   h1 {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 52px;
+    line-height: 75px;
     font-weight: 700;
     margin: 0px;
     text-transform: uppercase;
@@ -58,12 +63,19 @@
       border-bottom: 5px solid #292929;
       animation: appearBorder 2s;
     }
+    @media screen and (min-width: 600px) {
+      font-size: 80px;
+      line-height: 90px;
+    }
   }
 
   h2 {
     font-size: 34px;
     font-weight: 400;
-    margin-top: 204px;
+    margin-top: 30px;
+    @media screen and (min-width: 600px) {
+      margin-top: 204px;
+    }
   }
 
   .About-picture {
@@ -71,7 +83,10 @@
     height: 250px;
     border-radius: 50%;
     border: 3px solid #444;
-    margin: 100px auto;
+    margin: 0 auto;
+    @media screen and (min-width: 600px) {
+      margin: 100px auto;
+    }
   }
 
   .About-container {
@@ -91,21 +106,30 @@
 
   .About-container-left {
     display: inline-block;
-    width: 39%;
+    width: 100%;
+    @media screen and (min-width: 600px) {
+      width: 39%;
+    }
   }
 
   .About-container-right {
     display: inline-block;
-    width: 60%;
+    width: 100%;
+    @media screen and (min-width: 600px) {
+      width: 60%;
+    }
   }
 
   .About-icons {
-    margin: 20px 0 0 39%;
+    margin: 20px 0 70px 0;
+    @media screen and (min-width: 600px) {
+      margin: 20px 0 0 39%;
+    }
   }
 
   .About-icon {
-    height: 100px;
-    width: 100px;
+    height: 85px;
+    width: 85px;
     border-radius: 50%;
     border: 3px solid #444;
 
@@ -113,6 +137,10 @@
       padding: 10px;
       background-color: white;
     }
+
+        @media screen and (min-width: 600px) {
+    height: 100px;
+    width: 100px;    }
   }
 }
 </style>
