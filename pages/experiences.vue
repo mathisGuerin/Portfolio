@@ -75,16 +75,17 @@ export default {
   background-size: cover;
   padding: 200px 50px 50px;
   color: #292929;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 h1 {
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   line-height: 90px;
   font-weight: 700;
   margin: 0 0 20px;
-  padding: 150px 0 0px;
+  padding: 25px 0 0px;
   text-transform: uppercase;
   text-align: left;
   width: fit-content;
@@ -98,6 +99,11 @@ h1 {
     border-bottom: 5px solid #292929;
     animation: appearBorder 2s;
   }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 80px;
+    padding: 100px 0 0px;
+  }
 }
 
 .Experiences-buttons {
@@ -106,20 +112,29 @@ h1 {
 
 .Experiences-wrapper {
   position: relative;
-  margin: 0 auto;
-  width: 600px;
-  height: 430px;
+  height: 470px;
   overflow: hidden;
+
+  @media screen and (min-width: 800px) {
+    height: 430px;
+  }
 }
 
 .Experiences-slide {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 40%;
+  bottom: -35px;
   font-size: 50px;
+  padding: 10px;
   color: #292929;
   outline: none;
+  opacity: 0.8;
+  transition: all ease-in-out 300ms;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &.slide-next {
     right: 6%;
@@ -128,12 +143,21 @@ h1 {
   &.slide-prev {
     left: 6%;
   }
+
+  @media screen and (min-width: 800px) {
+    top: 27%;
+    bottom: inherit;
+    padding: 35px;
+  }
 }
 
 .Experience-nav {
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 
   button {
     border: none;
