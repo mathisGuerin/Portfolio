@@ -35,18 +35,28 @@
 
 <style lang="scss" scoped>
 .Contact {
-  background: url("../assets/bgPhotoContact.jpeg");
-  background-position: center left;
-  background-size: cover;
-  height: 100vh;
-  padding: 400px 50px 50px;
+  background-color: #e7e7e7;
+  height: 100%;
+  min-height: 100vh;
+  padding: 30px;
   color: #292929;
+
+  @media screen and (min-width: 600px) {
+    background: url("../assets/bgPhotoContact.jpeg");
+    background-position: center center;
+    background-size: cover;
+    padding: 250px 50px 50px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 400px 50px 50px;
+  }
 }
 
 h1 {
   position: relative;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 52px;
+  line-height: 66px;
   font-weight: 700;
   margin: 0px;
   text-transform: uppercase;
@@ -60,6 +70,10 @@ h1 {
     right: 50%;
     border-bottom: 5px solid #292929;
     animation: appearBorder 2s;
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 80px;
+    line-height: 90px;
   }
 }
 
@@ -102,6 +116,11 @@ h2 {
   font-weight: 400;
   vertical-align: super;
   opacity: 0;
+  font-size: 18px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 24px;
+  }
 }
 
 .Contact-icon {
@@ -137,13 +156,18 @@ h2 {
 }
 
 .Contact-img {
-  height: 120px;
-  margin: 20px;
+  height: 80px;
+  margin: 8px;
   opacity: 0.9;
   transition: all 300ms ease-in-out;
 
   &:hover {
     opacity: 1;
+  }
+
+  @media screen and (min-width: 600px) {
+    height: 120px;
+    margin: 20px;
   }
 }
 </style>
