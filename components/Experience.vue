@@ -13,7 +13,12 @@
       </div>
       <div class="Experience-middle">
         <h2>{{this.exp.title}}</h2>
-        <div v-for="desc in this.exp.description" v-bind:key="desc" :desc="desc" class="Experience-desc">{{desc}}</div>
+        <div
+          v-for="desc in this.exp.description"
+          v-bind:key="desc"
+          :desc="desc"
+          class="Experience-desc"
+        >{{desc}}</div>
       </div>
     </div>
   </transition>
@@ -51,17 +56,22 @@ export default {
 
 .Experience-top {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: #e2e2e2;
   border-top-left-radius: 25px;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
 
   .Experience-img {
     margin: 0 auto;
     display: block;
     padding: 20px;
-    height: 80px;
+    height: 70px;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 600px) {
       height: 100px;
     }
   }
@@ -69,6 +79,15 @@ export default {
 
 .Experience-middle {
   margin: 10px 0;
+  min-height: 340px;
+
+  @media screen and (min-width: 600px) {
+    min-height: 240px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    min-height: 220px;
+  }
 
   h2 {
     margin: 5px 0;
@@ -100,13 +119,17 @@ export default {
   .Experience-date-icon {
     position: absolute;
     top: 39%;
-    left: 38%;
+    left: 80%;
     color: white;
     background-color: #292929;
     padding: 1px;
     width: 22px;
     height: 22px;
     border-radius: 50%;
+
+    @media screen and (min-width: 600px) {
+      left: 38%;
+    }
   }
 }
 

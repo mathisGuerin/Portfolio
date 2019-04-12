@@ -70,22 +70,25 @@ export default {
 
 <style lang="scss" scoped>
 .Experiences {
-  background: url("../assets/bgPhotoExperiences.jpeg");
-  background-position: center left;
-  background-size: cover;
-  padding: 200px 50px 50px;
+  background-color: #e7e7e7;
   color: #292929;
   height: 100%;
   min-height: 100vh;
+  padding: 30px;
+
+  @media screen and (min-width: 600px) {
+      background: url("../assets/bgPhotoExperiences.jpeg");
+  background-position: center left;
+  background-size: cover;
+    padding: 200px 50px 50px;
+  }
 }
 
 h1 {
   position: relative;
-  font-size: 50px;
-  line-height: 90px;
+  font-size: 40px;
+  line-height: 60px;
   font-weight: 700;
-  margin: 0 0 20px;
-  padding: 25px 0 0px;
   text-transform: uppercase;
   text-align: left;
   width: fit-content;
@@ -100,8 +103,15 @@ h1 {
     animation: appearBorder 2s;
   }
 
+  @media screen and (min-width: 600px) {
+    padding: 25px 0 0px;
+      margin: 0 0 20px;
+
+  }
+
   @media screen and (min-width: 1400px) {
     font-size: 80px;
+    line-height: 100px;
     padding: 100px 0 0px;
   }
 }
@@ -112,25 +122,21 @@ h1 {
 
 .Experiences-wrapper {
   position: relative;
-  height: 470px;
   overflow: hidden;
-
-  @media screen and (min-width: 800px) {
-    height: 430px;
-  }
 }
 
 .Experiences-slide {
   background-color: transparent;
   border: none;
   position: absolute;
-  bottom: -35px;
+  bottom: 0px;
   font-size: 50px;
   padding: 10px;
   color: #292929;
   outline: none;
   opacity: 0.8;
   transition: all ease-in-out 300ms;
+  z-index: 2;
 
   &:hover {
     opacity: 1;
@@ -157,6 +163,7 @@ h1 {
   margin-right: auto;
   left: 0;
   right: 0;
+  bottom: 26px;
   text-align: center;
 
   button {
@@ -172,6 +179,10 @@ h1 {
     &.active {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    bottom: 0;
   }
 }
 </style>
