@@ -51,10 +51,9 @@ export default {
 <style lang="scss" scoped>
 .Skills {
   background-color: #e7e7e7;
-
   height: 100%;
   min-height: 100vh;
-  padding: 50px;
+  padding: 30px 30px 150px;
   color: #292929;
   overflow: hidden;
 
@@ -71,29 +70,8 @@ export default {
   text-align: center;
 }
 
-.Skill-wrapper {
-  display: inline-block;
-}
-
 .Skills-selected {
   margin: 50px 0px;
-
-  .Skill-selected {
-    width: fit-content;
-    margin: 0 auto;
-
-    img {
-      height: 170px;
-      margin: 20px;
-    }
-  }
-
-  .Skill-description {
-    display: inline-block;
-    vertical-align: top;
-    margin: 13px;
-    max-width: 500px;
-  }
 }
 
 h1 {
@@ -120,12 +98,6 @@ h1 {
     font-size: 80px;
     line-height: 90px;
   }
-}
-
-.Skills-logo {
-  height: 100px;
-  vertical-align: middle;
-  cursor: pointer;
 }
 
 .vue-easy-pie-chart {
@@ -188,37 +160,6 @@ h1 {
   to {
     opacity: 0;
     transform: translateX(-100%);
-  }
-}
-
-// Animation d'une compétence
-.skill-enter-active {
-  animation: skillIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25) 600ms forwards;
-  opacity: 0;
-}
-
-.skill-leave-active {
-  animation: skillOut 500ms cubic-bezier(0.49, 0.15, 0.51, 1.25);
-  position: absolute;
-  top: 0px;
-  left: 0;
-  right: 0;
-}
-
-@keyframes skillIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes skillOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 </style>

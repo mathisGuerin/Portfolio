@@ -31,50 +31,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Skills {
-  background-color: #e7e7e7;
+.Skill-selected {
+  width: fit-content;
+  margin: 0 auto;
 
-  height: 100%;
-  min-height: 100vh;
-  padding: 50px;
-  color: #292929;
-  overflow: hidden;
-
-  @media screen and (min-width: 600px) {
-    background: url("../assets/bgPhotoSkills.jpeg");
-    background-position: center left;
-    background-size: cover;
-    padding: 240px 50px 50px;
-  }
-}
-
-.Skills-wrapper {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.Skill-wrapper {
-  display: inline-block;
-}
-
-.Skills-selected {
-  margin: 50px 0px;
-
-  .Skill-selected {
-    width: fit-content;
-    margin: 0 auto;
-
-    img {
-      height: 170px;
-      margin: 20px;
-    }
+  img {
+    height: 170px;
+    margin: 20px;
   }
 
   .Skill-description {
-    display: inline-block;
-    vertical-align: top;
-    margin: 13px;
-    max-width: 500px;
+    display: block;
+    @media screen and (min-width: 1000px) {
+      display: inline-block;
+      margin: 13px;
+      width: 50%;
+      vertical-align: top;
+    }
 
     p {
       margin: 10px 0;
@@ -82,29 +55,13 @@ export default {
   }
 }
 
-h1 {
-  position: relative;
-  font-size: 46px;
-  line-height: 74px;
-  font-weight: 700;
-  margin: 0px;
-  text-transform: uppercase;
-  text-align: left;
-  width: fit-content;
+.vue-easy-pie-chart {
+  display: block;
+  margin: 0 auto;
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 50%;
-    border-bottom: 5px solid #292929;
-    animation: appearBorder 2s;
-  }
-
-  @media screen and (min-width: 700px) {
-    font-size: 80px;
-    line-height: 90px;
+  @media screen and (min-width: 1000px) {
+    display: inline-block;
+    margin: 13px;
   }
 }
 
@@ -112,69 +69,6 @@ h1 {
   height: 100px;
   vertical-align: middle;
   cursor: pointer;
-}
-
-.vue-easy-pie-chart {
-  display: inline-block;
-  @media screen and (min-width: 1000px) {
-    margin: 13px;
-  }
-}
-
-// Animation des skills
-.Skills-transition {
-  position: relative;
-  @media screen and (min-width: 600px) {
-    height: 835px;
-  }
-
-  @media screen and (min-width: 730px) {
-    height: 630px;
-  }
-
-  @media screen and (min-width: 920px) {
-    height: 540px;
-  }
-}
-
-.skills-enter-active {
-  animation: skillsIn 1s ease-in-out 300ms;
-  opacity: 0;
-}
-
-.skills-leave-active {
-  animation: skillsOut 1s ease-in-out;
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-}
-
-@keyframes skillsIn {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  70% {
-    transform: translateX(10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes skillsOut {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(10%);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
 }
 
 // Animation d'une compétence
