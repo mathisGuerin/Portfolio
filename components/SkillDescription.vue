@@ -46,6 +46,7 @@ export default {
       display: inline-block;
       margin: 13px;
       width: 50%;
+      max-width: 700px;
       vertical-align: top;
     }
 

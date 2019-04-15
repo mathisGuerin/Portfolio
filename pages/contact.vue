@@ -35,21 +35,24 @@
 
 <style lang="scss" scoped>
 .Contact {
-  background-color: #e7e7e7;
+  position: relative;
   height: 100%;
   min-height: 100vh;
   padding: 30px;
   color: #292929;
+  padding: 30px 30px 150px;
 
-  @media screen and (min-width: 600px) {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
     background: url("../assets/bgPhotoContact.jpeg");
     background-position: center center;
     background-size: cover;
-    padding: 250px 50px 50px;
-  }
-
-  @media screen and (min-width: 1400px) {
-    padding: 400px 50px 50px;
   }
 }
 
@@ -72,25 +75,20 @@ h1 {
     animation: appearBorder 2s;
   }
   @media screen and (min-width: 600px) {
+    width: 500px;
+    margin: 0 auto;
     font-size: 80px;
     line-height: 90px;
   }
 }
 
 .Contact-wrapper {
-  display: inline-block;
-  margin: 30px 0 20px;
+  margin: 50px 0;
   width: 100%;
 
-  @media screen and (min-width: 1000px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 40%;
-  }
-  @media screen and (min-width: 1600px) {
-    width: 30%;
+  @media screen and (min-width: 600px) {
+    width: 500px;
+    margin: 100px auto;
   }
 }
 
@@ -152,7 +150,11 @@ h2 {
 }
 
 .Contact-imgs {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  @media screen and (min-width: 600px) {
+    width: 500px;
+  }
 }
 
 .Contact-img {
