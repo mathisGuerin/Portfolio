@@ -1,52 +1,34 @@
 <template>
-  <div class="Skills">
-    <h1>Compétences</h1>
-    <div class="Skills-transition">
-      <transition name="skills">
-        <div v-if="selectedSkill==''" class="Skills-wrapper">
-          <Skill
-            v-for="skill in skills"
-            v-bind:key="skill.index"
-            :skill="skill"
-            v-on:click.native="select(skill.name)"
-          ></Skill>
-        </div>
-      </transition>
-      <div @click="select('')" class="Skills-selected">
-        <SkillDescription
-          v-for="skill in skills"
-          v-bind:key="skill.index"
-          :selectedSkill="selectedSkill"
-          :skill="skill"
-          v-on:click.native="select(skill.name)"
-        ></SkillDescription>
+  <transition name="skill">
+    <div class="Skill-selected" v-if="selectedSkill == this.skill.name">
+      <vue-easy-pie-chart
+        :percent="this.skill.value"
+        :bar-color="this.skill.color"
+        track-color="#dedede"
+        scale-color="transparent"
+        :size="300"
+        :scale-length="15"
+        :line-width="8"
+      >
+        <img class="Skills-logo" :src="this.skill.logo">
+      </vue-easy-pie-chart>
+      <div class="Skill-description">
+        <p v-for="desc in this.skill.description" v-bind:key="desc.index">{{desc}}</p>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 import VueEasyPieChart from "vue-easy-pie-chart";
-import Skill from "../components/Skill";
-import SkillDescription from '../components/SkillDescription'
 import "vue-easy-pie-chart/dist/vue-easy-pie-chart.css";
-import skills from "../static/skills.js";
 
 export default {
-  data() {
-    return {
-      selectedSkill: "",
-      skills: skills,
-    };
-  },
-  methods: {
-    select(skill) {
-      this.selectedSkill = skill;
-    }
-  },
-  components: { VueEasyPieChart, Skill, SkillDescription }
+  props: ["skill", "selectedSkill"],
+  computed: {},
+  components: { VueEasyPieChart }
 };
-</script> 
+</script>
 
 <style lang="scss" scoped>
 .Skills {
@@ -93,6 +75,10 @@ export default {
     vertical-align: top;
     margin: 13px;
     max-width: 500px;
+
+    p {
+      margin: 10px 0;
+    }
   }
 }
 
@@ -222,3 +208,4 @@ h1 {
   }
 }
 </style>
+
