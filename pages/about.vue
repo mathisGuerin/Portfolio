@@ -31,17 +31,29 @@
 
 <style lang="scss" scoped>
 .About {
+  position: relative;
   font-family: "Open Sans", sans-serif;
   color: white;
   height: 100%;
   min-height: 100vh;
-  padding: 50px 50px 80px;
+  padding: 30px 30px 80px;
   background-color: #e7e7e7;
   color: #292929;
 
   @media screen and (min-width: 600px) {
+    padding: 50px 50px 80px;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
     background: url("../assets/bgPhotoAbout.jpeg");
-    background-position: center left;
+    background-position: left 11% center;
     background-size: cover;
   }
 
@@ -73,9 +85,6 @@
     font-size: 34px;
     font-weight: 400;
     margin-top: 30px;
-    @media screen and (min-width: 600px) {
-      margin-top: 204px;
-    }
   }
 
   .About-picture {
@@ -84,12 +93,13 @@
     border-radius: 50%;
     border: 3px solid #444;
     margin: 0 auto;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1000px) {
       margin: 100px auto;
     }
   }
 
   .About-container {
+    position: relative;
     @media screen and (min-width: 1400px) {
       margin: 0 100px;
     }
@@ -107,7 +117,7 @@
   .About-container-left {
     display: inline-block;
     width: 100%;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1000px) {
       width: 39%;
     }
   }
@@ -115,32 +125,39 @@
   .About-container-right {
     display: inline-block;
     width: 100%;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1000px) {
       width: 60%;
+      max-width: 700px;
     }
   }
 
   .About-icons {
     margin: 20px 0 70px 0;
-    @media screen and (min-width: 600px) {
+    text-align: center;
+    @media screen and (min-width: 1000px) {
       margin: 20px 0 0 39%;
+      text-align: left;
     }
   }
 
   .About-icon {
     height: 85px;
     width: 85px;
+    margin: 5px;
     border-radius: 50%;
     border: 3px solid #444;
+    opacity: 0.8;
 
     &.About-icon-bretagne {
       padding: 10px;
       background-color: white;
     }
 
-        @media screen and (min-width: 600px) {
-    height: 100px;
-    width: 100px;    }
+    @media screen and (min-width: 600px) {
+      height: 100px;
+      width: 100px;
+      margin: 10px;
+    }
   }
 }
 </style>
