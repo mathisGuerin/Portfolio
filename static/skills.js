@@ -31,7 +31,7 @@ let skills = [
     description: [
       "Vue.js est un framework front-end permettant la création d'interfaces utilisateurs. Vue.js dispose également de nombreux plugins permettant notemment de gérer le routing de l'application (Vue-router), la gestion du state (Vuex)...",
       "Il est également possible de faire du rendu côté serveur, en utilisant le framework Nuxt. Celui-ci inclut de nombreux plugins par default (Vuex, Vue-router...), et permet de créer des applications universelles, c'est à dire qui peuvent être rendues à la fois côté client et côté serveur.",
-      "Je n'ai jamais utilisé Vue.js dans un cadre professionel, mais j'ai créé plusieurs projets persos avec ce framework, dont ce portfolio, créé avec Nuxt."
+      "Je n'ai jamais utilisé Vue.js dans un cadre professionnel, mais j'ai créé plusieurs projets persos avec ce framework, dont ce portfolio, développé avec Nuxt."
     ]
   },
   {
@@ -63,8 +63,8 @@ let skills = [
     description: [
       "Le CSS est un langage permettant de créer le style d'une page web.",
       "En attribuant une classe à une balise HTML, on va pouvoir déterminer le position, la taille, ou tout autre attribut visuel de cet élément.",
-      "Il existe également des préprocesseurs, qui permettent de générer dynamiquement des fichiers CSS. Grace aux préprocesseurs, il est possible d'insérer des variables, d'imbriquer les classes CSS, et d'effectuer certaines opérations (boucles, conditions...).",
-      "Il est également possible d'écrire du \"CSS-in-JS\", afin d'écrire du CSS à l'intérieur de nos composants JS. Grace à certaines librairies comme Styled-components, on peut conditionner le style d'un élement en fonction d'une propriété du composant."
+      "Il existe également des préprocesseurs, qui permettent de générer dynamiquement des fichiers CSS. Grâce aux préprocesseurs, il est possible d'insérer des variables, d'imbriquer les classes CSS, et d'effectuer certaines opérations (boucles, conditions...).",
+      "Il est également possible d'écrire du \"CSS-in-JS\", afin d'écrire du CSS à l'intérieur de nos composants JS. Grâce à certaines librairies comme Styled-components, on peut conditionner le style d'un élement en fonction d'une propriété du composant."
     ]
   },
   {

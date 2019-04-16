@@ -14,7 +14,7 @@
         </div>
         <div class="About-description">
           Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler sur un site grand public et de travailler
-          avec des technologies front-end récentes (React, Redux...)
+          avec des technologies front-end récentes (React, Redux...).
         </div>
         <div
           class="About-description"
