@@ -2,13 +2,13 @@
   <transition :name="transition">
     <div v-show="visible" class="Experience">
       <div class="Experience-top">
-        <div>
-          <img class="Experience-img" :src="this.exp.logo">
-        </div>
         <div class="Experience-date">
           <span>{{this.exp.date.begin}}</span>
           <font-awesome-icon class="Experience-date-icon" icon="arrow-circle-down"/>
           <span>{{this.exp.date.end}}</span>
+        </div>
+        <div>
+          <img class="Experience-img" :src="this.exp.logo">
         </div>
       </div>
       <div class="Experience-middle">
@@ -102,7 +102,6 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-left: 2px solid #292929;
 
   span {
     padding: 10px;
@@ -111,9 +110,12 @@ export default {
     flex: 1;
     justify-content: center;
     align-items: center;
+    border-left: 2px solid #292929;
 
     &:first-child {
       background-color: #99d2ff;
+      border-top-left-radius: 25px;
+      border-top: 2px solid #292929;
     }
   }
   .Experience-date-icon {
@@ -149,22 +151,22 @@ export default {
 
 @keyframes slideRightIn {
   from {
-    transform: translateX(100%);
+    transform: translateX(100%) scale(0.9);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
     opacity: 1;
   }
 }
 
 @keyframes slideRightOut {
   from {
-    transform: translateX(0) rotateY(0deg);
+    transform: translateX(0) rotateY(0deg) scale(1);
     opacity: 1;
   }
   to {
-    transform: translateX(-90%) rotateY(90deg);
+    transform: translateX(-90%) rotateY(90deg) scale(0.9);
     opacity: 0;
   }
 }
@@ -185,22 +187,22 @@ export default {
 
 @keyframes slideLeftIn {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-100%) scale(0.9);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
     opacity: 1;
   }
 }
 
 @keyframes slideLeftOut {
   from {
-    transform: translateX(0) rotateY(0deg);
+    transform: translateX(0) rotateY(0deg) scale(1);
     opacity: 1;
   }
   to {
-    transform: translateX(90%) rotateY(90deg);
+    transform: translateX(90%) rotateY(90deg) scale(0.9);
     opacity: 0;
   }
 }
