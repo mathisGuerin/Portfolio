@@ -100,13 +100,6 @@ h1 {
   }
 }
 
-.vue-easy-pie-chart {
-  display: inline-block;
-  @media screen and (min-width: 1000px) {
-    margin: 13px;
-  }
-}
-
 // Animation des skills
 .Skills-transition {
   position: relative;

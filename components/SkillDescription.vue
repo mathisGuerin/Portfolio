@@ -10,7 +10,7 @@
         :scale-length="15"
         :line-width="8"
       >
-        <img class="Skills-logo" :src="this.skill.logo">
+        <img class="Skills-logo" :src="this.skill.logo"  title="Retour">
       </vue-easy-pie-chart>
       <div class="Skill-description">
         <p v-for="desc in this.skill.description" v-bind:key="desc.index">{{desc}}</p>
@@ -34,6 +34,7 @@ export default {
 .Skill-selected {
   width: fit-content;
   margin: 0 auto;
+  cursor: pointer;
 
   img {
     height: 170px;

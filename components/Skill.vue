@@ -1,5 +1,5 @@
 <template>
-  <div class="Skill-wrapper">
+  <div class="Skill-wrapper" title="Cliquez pour voir plus de détails">
     <vue-easy-pie-chart
       :percent="this.skill.value"
       :bar-color="this.skill.color"
@@ -42,6 +42,19 @@ export default {
   display: inline-block;
   @media screen and (min-width: 1000px) {
     margin: 13px;
+  }
+
+  &:hover {
+    animation: hover 500ms ease-in-out forwards;
+  }
+
+  @keyframes hover {
+    0%, 100% {
+      transform: scale(1)
+    }
+    50% {
+      transform: scale(1.05)
+    }
   }
 }
 </style>
