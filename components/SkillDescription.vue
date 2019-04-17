@@ -49,6 +49,7 @@ export default {
       width: 50%;
       max-width: 700px;
       vertical-align: top;
+      font-size: 18px;
     }
 
     p {

@@ -131,6 +131,7 @@ h1 {
 
   @media screen and (min-width: 600px) {
     height: 835px;
+    min-height: initial;
   }
 
   @media screen and (min-width: 730px) {
