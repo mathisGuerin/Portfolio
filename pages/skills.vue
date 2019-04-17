@@ -50,33 +50,47 @@ export default {
 
 <style lang="scss" scoped>
 .Skills {
-  background-color: #e7e7e7;
+  position: relative;
   height: 100%;
   min-height: 100vh;
   padding: 30px 30px 53px;
   color: #292929;
   overflow: hidden;
 
-  @media screen and (min-width: 600px) {
-    background: url("../assets/bgPhotoSkills.jpeg");
-    background-position: center left;
-    background-size: cover;
-    padding: 240px 50px 53pxpx;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: #e7e7e7;
+
+    @media screen and (min-width: 700px) {
+      background: url("../assets/bgPhotoSkills.jpeg");
+      background-position: left 11% center;
+      background-size: cover;
+    }
   }
 }
 
 .Skills-wrapper {
-  margin-top: 20px;
+  margin: 20px auto;
   text-align: center;
+  max-width: 1000px;
 
-  @media screen and (min-width: 600px) {
-    margin-top: 60px;
+  @media screen and (min-width: 1000px) {
+    margin: 60px auto;
   }
-
 }
 
 .Skills-selected {
-  margin: 50px 0px;
+  margin: 20px 0px;
+
+  @media screen and (min-width: 1000px) {
+    margin: 60px auto;
+  }
 }
 
 h1 {
@@ -113,6 +127,7 @@ h1 {
 .Skills-transition {
   position: relative;
   -webkit-tap-highlight-color: transparent;
+  min-height: 835px;
 
   @media screen and (min-width: 600px) {
     height: 835px;
@@ -123,7 +138,7 @@ h1 {
   }
 
   @media screen and (min-width: 920px) {
-    height: 540px;
+    height: 500px;
   }
 }
 
@@ -135,9 +150,13 @@ h1 {
 .skills-leave-active {
   animation: skillsOut 1s ease-in-out;
   position: absolute;
-  top: -50px;
+  top: -20px;
   left: 0;
   right: 0;
+
+  @media screen and (min-width: 1000px) {
+    top: -60px;
+  }
 }
 
 @keyframes skillsIn {
