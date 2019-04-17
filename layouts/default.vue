@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="MainLayout">
     <nuxt/>
-    <Menu class="Menu"> </Menu>
+    <Menu class="Menu"></Menu>
   </div>
 </template>
 
 <script>
-import Menu from '../components/Menu.vue'
+import Menu from "../components/Menu.vue";
 export default {
   components: {
     Menu
@@ -16,10 +16,10 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -29,7 +29,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -63,20 +65,36 @@ html {
   background-color: #35495e;
 }
 
-.Menu {
+.MainLayout {
+  position: relative;
+  min-height: 100vh;
+}
+
+.Portfolio + .Menu,
+.Contact + .Menu,
+.Contact + .Menu {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.Menu {
+  position: absolute;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: all .25s ease-in-out;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.25s ease-in-out;
 }
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0;
   transform-origin: 50% 50%;
 }

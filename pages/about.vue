@@ -36,12 +36,12 @@
   color: white;
   height: 100%;
   min-height: 100vh;
-  padding: 30px 30px 80px;
+  padding: 30px 30px 53px;
   background-color: #e7e7e7;
   color: #292929;
 
   @media screen and (min-width: 600px) {
-    padding: 50px 50px 80px;
+    padding: 50px 50px 53px;
   }
   
   &:before {
@@ -132,7 +132,7 @@
   }
 
   .About-icons {
-    margin: 20px 0 70px 0;
+    margin: 20px 0 20px;
     text-align: center;
     @media screen and (min-width: 1000px) {
       margin: 20px 0 0 39%;

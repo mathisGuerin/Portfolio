@@ -40,7 +40,7 @@
   min-height: 100vh;
   padding: 30px;
   color: #292929;
-  padding: 30px 30px 150px;
+  padding: 30px 30px 53px;
 
   &:before {
     content: "";

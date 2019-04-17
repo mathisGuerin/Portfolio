@@ -1,24 +1,22 @@
 <template>
   <div class="Experiences">
     <h1>Expériences</h1>
-    <div class="Experiences-buttons">
-      <div class="Experiences-wrapper">
-        <Experience v-for="exp in experiences" v-bind:key="exp.title" :exp="exp"></Experience>
-      </div>
+    <div class="Experiences-wrapper">
+      <Experience v-for="exp in experiences" v-bind:key="exp.title" :exp="exp"></Experience>
+    </div>
+    <div class="Experience-nav">
       <button class="Experiences-slide slide-prev" @click.prevent="prev">
         <font-awesome-icon icon="chevron-left"/>
       </button>
+      <button class="Experience-nav--button"
+        v-for="n in nbExperiences"
+        :key="n"
+        @click="goto(n-1)"
+        :class="{active: n-1 === index}"
+      ></button>
       <button class="Experiences-slide slide-next" @click.prevent="next">
         <font-awesome-icon icon="chevron-right"/>
       </button>
-      <div class="Experience-nav">
-        <button
-          v-for="n in nbExperiences"
-          :key="n"
-          @click="goto(n-1)"
-          :class="{active: n-1 === index}"
-        ></button>
-      </div>
     </div>
   </div>
 </template>
@@ -29,7 +27,6 @@ import experiences from "../static/experiences.js";
 
 export default {
   data() {
-    console.log(experiences.length);
     return {
       experiences: experiences,
       index: 0,
@@ -70,17 +67,23 @@ export default {
 
 <style lang="scss" scoped>
 .Experiences {
-  background-color: #e7e7e7;
+  position: relative;
   color: #292929;
   height: 100%;
   min-height: 100vh;
-  padding: 30px;
+  padding: 30px 30px 53px;
 
-  @media screen and (min-width: 600px) {
-      background: url("../assets/bgPhotoExperiences.jpeg");
-  background-position: center left;
-  background-size: cover;
-    padding: 200px 50px 50px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background: url("../assets/bgPhotoExperiences.jpeg");
+    background-position: left 11% center;
+    background-size: cover;
   }
 }
 
@@ -105,8 +108,7 @@ h1 {
 
   @media screen and (min-width: 600px) {
     padding: 25px 0 0px;
-      margin: 0 0 20px;
-
+    margin: 0 0 20px;
   }
 
   @media screen and (min-width: 1400px) {
@@ -114,10 +116,6 @@ h1 {
     line-height: 100px;
     padding: 100px 0 0px;
   }
-}
-
-.Experiences-buttons {
-  position: relative;
 }
 
 .Experiences-wrapper {
@@ -128,12 +126,11 @@ h1 {
 .Experiences-slide {
   background-color: transparent;
   border: none;
-  position: absolute;
-  bottom: 0px;
   font-size: 50px;
   padding: 10px;
   color: #292929;
   outline: none;
+  vertical-align: middle;
   opacity: 0.8;
   transition: all ease-in-out 300ms;
   z-index: 2;
@@ -141,32 +138,13 @@ h1 {
   &:hover {
     opacity: 1;
   }
-
-  &.slide-next {
-    right: 6%;
-  }
-
-  &.slide-prev {
-    left: 6%;
-  }
-
-  @media screen and (min-width: 800px) {
-    top: 27%;
-    bottom: inherit;
-    padding: 35px;
-  }
 }
 
 .Experience-nav {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 26px;
+  position: relative;
   text-align: center;
 
-  button {
+  .Experience-nav--button {
     border: none;
     background-color: #292929;
     opacity: 0.5;

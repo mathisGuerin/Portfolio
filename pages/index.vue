@@ -44,14 +44,14 @@ export default {};
 }
 
 .Home-Presentation {
-  max-width: 80%;
+  max-width: 82%;
   position: absolute;
   left: 0;
   right: 0;
   top: 12%;
   text-align: center;
   margin: 0 auto;
-  padding: 30px 0 30px;
+  padding: 30px 5px 30px;
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.8);
 
@@ -61,7 +61,7 @@ export default {};
 
   @media screen and (min-width: 1000px) {
     top: 35%;
-    max-width: 960px;
+    max-width: 1000px;
   }
 
   h1 {

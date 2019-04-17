@@ -28,7 +28,7 @@
 <script>
 import VueEasyPieChart from "vue-easy-pie-chart";
 import Skill from "../components/Skill";
-import SkillDescription from '../components/SkillDescription'
+import SkillDescription from "../components/SkillDescription";
 import "vue-easy-pie-chart/dist/vue-easy-pie-chart.css";
 import skills from "../static/skills.js";
 
@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       selectedSkill: "",
-      skills: skills,
+      skills: skills
     };
   },
   methods: {
@@ -53,7 +53,7 @@ export default {
   background-color: #e7e7e7;
   height: 100%;
   min-height: 100vh;
-  padding: 30px 30px 150px;
+  padding: 30px 30px 53px;
   color: #292929;
   overflow: hidden;
 
@@ -61,13 +61,18 @@ export default {
     background: url("../assets/bgPhotoSkills.jpeg");
     background-position: center left;
     background-size: cover;
-    padding: 240px 50px 50px;
+    padding: 240px 50px 53pxpx;
   }
 }
 
 .Skills-wrapper {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
+
+  @media screen and (min-width: 600px) {
+    margin-top: 60px;
+  }
+
 }
 
 .Skills-selected {
@@ -76,8 +81,8 @@ export default {
 
 h1 {
   position: relative;
-  font-size: 46px;
-  line-height: 74px;
+  font-size: 41px;
+  line-height: 68px;
   font-weight: 700;
   margin: 0px;
   text-transform: uppercase;
@@ -93,6 +98,10 @@ h1 {
     border-bottom: 5px solid #292929;
     animation: appearBorder 2s;
   }
+  @media screen and (min-width: 400px) {
+    font-size: 46px;
+    line-height: 74px;
+  }
 
   @media screen and (min-width: 700px) {
     font-size: 80px;
@@ -103,6 +112,8 @@ h1 {
 // Animation des skills
 .Skills-transition {
   position: relative;
+  -webkit-tap-highlight-color: transparent;
+
   @media screen and (min-width: 600px) {
     height: 835px;
   }
