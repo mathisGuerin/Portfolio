@@ -2,18 +2,19 @@
   <div class="Portfolio">
     <div class="Home-Container-top">
       <div class="Home-Presentation">
-        <h1>Je suis Mathis Guérin</h1>
+        <h1>Je suis </h1>
+        <h1>Mathis Guérin</h1>
         <vue-typed-js
           :typeSpeed="100"
+          :backDelay="1000"
+          :backSpeed="50"
+          :loop="true"
           :contentType="'null'"
           :strings="['< Développeur front-end />']"
         >
           <h2 class="typing"></h2>
         </vue-typed-js>
       </div>
-      <!-- <video class="Home-bgVideo" autoplay muted loop id="myVideo">
-        <source src="../assets/bgVideo.mp4" type="video/mp4">
-      </video>-->
     </div>
   </div>
 </template>
@@ -65,11 +66,12 @@ export default {};
   }
 
   h1 {
-    font-size: 67px;
-    line-height: 74px;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 60px;
     font-weight: 700;
     margin: 0px;
-    padding-bottom: 8px;
+    padding: 0 4px 8px;
     text-transform: uppercase;
 
     @media screen and (min-width: 600px) {

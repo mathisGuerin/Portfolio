@@ -10,7 +10,8 @@
         :scale-length="15"
         :line-width="8"
       >
-        <img class="Skills-logo" :src="this.skill.logo"  title="Retour">
+        <font-awesome-icon title="Retour" class="Skill-icon-back" icon="reply"/>
+        <img class="Skills-logo" :src="this.skill.logo" title="Retour">
       </vue-easy-pie-chart>
       <div class="Skill-description">
         <p v-for="desc in this.skill.description" v-bind:key="desc.index">{{desc}}</p>
@@ -74,6 +75,20 @@ export default {
   cursor: pointer;
 }
 
+.Skill-icon-back {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 35px;
+  padding: 8px;
+  border: 3px solid #dedede;
+  border-radius: 50%;
+  color: #dedede;
+  cursor: pointer;
+  animation: back 1000ms ease-in-out forwards 1000ms;
+  opacity: 0;
+}
+
 // Animation d'une compétence
 .skill-enter-active {
   animation: skillIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25) 600ms forwards;
@@ -102,6 +117,20 @@ export default {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes back {
+  0% {
+    opacity: 0;
+    transform: translatex(-200px);
+  }
+  80% {
+    transform: translatex(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0px);
   }
 }
 </style>

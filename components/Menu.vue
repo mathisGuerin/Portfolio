@@ -54,6 +54,7 @@ a {
   transition: all ease-in-out 300ms;
   color: white;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover, &.nuxt-link-exact-active {
     background: rgba(0, 0, 0, 0.7);

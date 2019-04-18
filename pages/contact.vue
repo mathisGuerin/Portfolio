@@ -155,21 +155,32 @@ h2 {
   @media screen and (min-width: 600px) {
     width: 500px;
   }
+
+  a {
+    &:hover .Contact-img {
+      animation: bounce 500ms ease-in-out;
+    }
+  }
 }
 
 .Contact-img {
   height: 80px;
   margin: 8px;
   opacity: 0.9;
-  transition: all 300ms ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
 
   @media screen and (min-width: 600px) {
     height: 120px;
     margin: 20px;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 </style>

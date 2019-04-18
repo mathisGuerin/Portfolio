@@ -6,7 +6,10 @@
       </div>
       <div class="About-container-right">
         <h1>A propos</h1>
-        <h2>Mathis Guérin, 24 ans</h2>
+        <h2>
+          <span>Mathis Guérin,</span>
+          <span>24 ans</span>
+        </h2>
         <div class="About-description">
           Issu d'une formation d'ingénieur généraliste à l'ISEN Brest,
           mon alternance à Sopra Stéria m'a permis d'approfondir mes compétences dans les technologies du web.
@@ -43,9 +46,9 @@
   @media screen and (min-width: 600px) {
     padding: 50px 50px 53px;
   }
-  
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -85,6 +88,10 @@
     font-size: 34px;
     font-weight: 400;
     margin-top: 30px;
+
+    span {
+      display: inline-block;
+    }
   }
 
   .About-picture {
