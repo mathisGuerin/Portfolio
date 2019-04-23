@@ -90,17 +90,5 @@ export default {};
     font-weight: 400;
   }
 }
-
-.Home-bgVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-}
 </style>
 
