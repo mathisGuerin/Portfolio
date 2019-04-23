@@ -107,14 +107,14 @@ h1 {
   }
 
   @media screen and (min-width: 600px) {
-    padding: 25px 0 0px;
+    font-size: 80px;
+    line-height: 90px;
     margin: 0 0 20px;
   }
 
   @media screen and (min-width: 1400px) {
     font-size: 80px;
     line-height: 100px;
-    padding: 100px 0 0px;
   }
 }
 
