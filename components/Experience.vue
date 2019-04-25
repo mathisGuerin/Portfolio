@@ -4,8 +4,10 @@
       <h2>{{this.exp.title}}</h2>
       <div class="Experience-date">
         <span>{{this.exp.date.begin}}</span>
-        <font-awesome-icon class="Experience-date-icon" icon="arrow-circle-right"/>
-        <span>{{this.exp.date.end}}</span>
+        <div class="Experience-date--bottom">
+          <font-awesome-icon class="Experience-date-icon" icon="arrow-circle-right"/>
+          <span>{{this.exp.date.end}}</span>
+        </div>
       </div>
       <div>
         <img class="Experience-img" :src="this.exp.logo">
@@ -21,7 +23,10 @@
           v-bind:key="desc"
           :desc="desc"
           class="Experience-desc"
-        >{{desc}}</div>
+        >
+          <font-awesome-icon class="Experience-desc-icon" icon="circle"/>
+          <div>{{desc}}</div>
+        </div>
       </div>
     </transition>
   </div>
@@ -62,6 +67,10 @@ export default {
 
   .Experience-date {
     text-align: center;
+
+    .Experience-date--bottom {
+      display: inline-block;
+    }
   }
 
   .Experience-img {
@@ -73,10 +82,20 @@ export default {
 
 .Experience-middle {
   margin: 10px 0;
-  padding: 0 30px;
+
+  @media screen and (min-width: 600px) {
+    padding: 0 30px;
+  }
 
   .Experience-desc {
+    display: flex;
     padding: 2px 0;
+  }
+
+  .Experience-desc-icon {
+    font-size: 7px;
+    margin: 8px;
+    color: #757575;
   }
 }
 
@@ -101,6 +120,7 @@ export default {
   }
 
   .Home-arrow--icon {
+    cursor: pointer;
     height: 40px;
     width: 40px;
   }
@@ -128,13 +148,16 @@ export default {
 }
 
 @keyframes hideDetails {
-  from {
+  0% {
     opacity: 1;
     max-height: 200px;
   }
-  to {
+  50% {
     opacity: 0;
+  }
+  100% {
     max-height: 0;
+    opacity: 0
   }
 }
 
@@ -142,13 +165,13 @@ export default {
   from {
     transform: rotate(0deg)
   } to {
-    transform: rotate(180deg) translateY(5px)
+    transform: rotate(180deg) translateY(7px)
   }
 }
 
 @keyframes rotateArrow2 {
   from {
-    transform: rotate(180deg) translateY(5px)
+    transform: rotate(180deg) translateY(7px)
   } to {
     transform: rotate(0deg)
   }
