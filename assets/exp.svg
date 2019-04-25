@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 540 182" width="540" height="182">
+    <defs>
+        <path d="M0 0L540 0L540 156.33C400.7 156.21 322.75 156.3 306.15 156.58C286.65 156.63 289.87 181.96 270 182.03C250.13 182.1 252.17 156.8 233.59 156.41C216.46 156.52 138.59 156.5 0 156.33L0 0Z" id="doWoBdJCZ"></path>
+        <linearGradient id="gradientcbhvEXjLP" gradientUnits="userSpaceOnUse" x1="1.89" y1="-1.62" x2="538.38" y2="156.62">
+            <stop style="stop-color: #acb6e5;stop-opacity: 1" offset="0%"></stop>
+            <stop style="stop-color: #86fde8;stop-opacity: 1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g>
+        <g>
+            <g>
+                <use xlink:href="#doWoBdJCZ" opacity="1" fill="url(#gradientcbhvEXjLP)"></use>
+            </g>
+        </g>
+    </g>
+</svg>

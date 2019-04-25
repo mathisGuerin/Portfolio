@@ -1,18 +1,21 @@
 <template>
-  <transition :name="transition">
-    <div v-show="visible" class="Experience">
-      <div class="Experience-top">
-        <div class="Experience-date">
-          <span>{{this.exp.date.begin}}</span>
-          <font-awesome-icon class="Experience-date-icon" icon="arrow-circle-down"/>
-          <span>{{this.exp.date.end}}</span>
-        </div>
-        <div>
-          <img class="Experience-img" :src="this.exp.logo">
-        </div>
+  <div class="Experience">
+    <div class="Experience-top">
+      <h2>{{this.exp.title}}</h2>
+      <div class="Experience-date">
+        <span>{{this.exp.date.begin}}</span>
+        <font-awesome-icon class="Experience-date-icon" icon="arrow-circle-right"/>
+        <span>{{this.exp.date.end}}</span>
       </div>
-      <div class="Experience-middle">
-        <h2>{{this.exp.title}}</h2>
+      <div>
+        <img class="Experience-img" :src="this.exp.logo">
+      </div>
+      <div class="Home-arrow" :class="[displayDetails ? 'rotate' : 'rotate2']">
+        <font-awesome-icon @click="toogleDetails" class="Home-arrow--icon" icon="angle-down"/>
+      </div>
+    </div>
+    <transition name="details">
+      <div v-show="displayDetails" class="Experience-middle">
         <div
           v-for="desc in this.exp.description"
           v-bind:key="desc"
@@ -20,190 +23,134 @@
           class="Experience-desc"
         >{{desc}}</div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
 export default {
   props: ["exp"],
-  computed: {
-    visible() {
-      return this.exp.index === this.$parent.index;
-    },
-    transition() {
-      return "slide-" + this.$parent.direction;
+  data() {
+    return {
+      displayDetails: false
     }
-  }
+  },
+  methods: {
+    toogleDetails() {
+      this.displayDetails = !this.displayDetails
+    }
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 .Experience {
-  margin: 25px auto;
+  margin: 45px auto;
   max-width: 500px;
-
-  @media screen and (min-width: 800px) {
-    margin: 50px auto;
-  }
-}
-
-.Experience-left,
-.Experience-right {
-  display: inline-block;
-  vertical-align: top;
 }
 
 .Experience-top {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #e2e2e2;
-  border-top-left-radius: 25px;
+  position: relative;
+  padding: 20px;
+  background: url("../assets/exp.svg");
+  background-position: center center;
+  background-size: cover;
 
-  @media screen and (min-width: 600px) {
-    flex-direction: row;
+  h2 {
+    text-align: center;
+  }
+
+  .Experience-date {
+    text-align: center;
   }
 
   .Experience-img {
-    margin: 0 auto;
+    margin: 25px auto;
     display: block;
-    padding: 20px;
-    height: 70px;
-
-    @media screen and (min-width: 600px) {
-      height: 100px;
-    }
+    height: 35px;
   }
 }
 
 .Experience-middle {
   margin: 10px 0;
-  min-height: 340px;
-
-  @media screen and (min-width: 600px) {
-    min-height: 240px;
-  }
-
-  @media screen and (min-width: 1000px) {
-    min-height: 220px;
-  }
-
-  h2 {
-    margin: 5px 0;
-  }
+  padding: 0 30px;
 
   .Experience-desc {
     padding: 2px 0;
   }
 }
 
-.Experience-date {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  span {
-    padding: 10px;
-    background-color: #58b3fb;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    border-left: 2px solid #292929;
-
-    &:first-child {
-      background-color: #99d2ff;
-      border-top-left-radius: 25px;
-      border-top: 2px solid #292929;
-    }
-  }
-  .Experience-date-icon {
-    position: absolute;
-    top: 39%;
-    left: 80%;
-    color: white;
-    background-color: #292929;
-    padding: 1px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-
-    @media screen and (min-width: 600px) {
-      left: 38%;
-    }
-  }
-}
-
-// Animation bouton droit
-.slide-right-enter-active {
-  animation: slideRightIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
-}
-
-.slide-right-leave-active {
-  animation: slideRightOut 1s ease-in-out;
+.Home-arrow {
   position: absolute;
-  top: 0;
+  bottom: -6px;
   left: 0;
   right: 0;
-  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  color: white;
+  width: fit-content;
+  animation: rotateArrow 1s ease-in-out forwards;
+
+  &.rotate {
+    animation: rotateArrow 1s ease-in-out forwards;
+  }
+
+  &.rotate2 {
+    animation: rotateArrow2 1s ease-in-out forwards;
+  }
+
+  .Home-arrow--icon {
+    height: 40px;
+    width: 40px;
+  }
 }
 
-@keyframes slideRightIn {
+
+.details-enter-active {
+  animation: displayDetails 1s ease-in-out forwards;
+}
+
+.details-leave-active {
+  animation: hideDetails 1s ease-in-out forwards;
+}
+
+
+@keyframes displayDetails {
   from {
-    transform: translateX(100%) scale(0.9);
     opacity: 0;
+    max-height: 0;
   }
   to {
-    transform: translateX(0) scale(1);
     opacity: 1;
+    max-height: 200px;
   }
 }
 
-@keyframes slideRightOut {
+@keyframes hideDetails {
   from {
-    transform: translateX(0) rotateY(0deg) scale(1);
     opacity: 1;
+    max-height: 200px;
   }
   to {
-    transform: translateX(-90%) rotateY(90deg) scale(0.9);
     opacity: 0;
+    max-height: 0;
   }
 }
 
-// Animation bouton gauche
-.slide-left-enter-active {
-  animation: slideLeftIn 1s cubic-bezier(0.49, 0.15, 0.51, 1.25);
-}
-
-.slide-left-leave-active {
-  animation: slideLeftOut 1s ease-in-out;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  perspective: 1000px;
-}
-
-@keyframes slideLeftIn {
+@keyframes rotateArrow {
   from {
-    transform: translateX(-100%) scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) scale(1);
-    opacity: 1;
+    transform: rotate(0deg)
+  } to {
+    transform: rotate(180deg) translateY(5px)
   }
 }
 
-@keyframes slideLeftOut {
+@keyframes rotateArrow2 {
   from {
-    transform: translateX(0) rotateY(0deg) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(90%) rotateY(90deg) scale(0.9);
-    opacity: 0;
+    transform: rotate(180deg) translateY(5px)
+  } to {
+    transform: rotate(0deg)
   }
 }
 </style>
