@@ -10,6 +10,7 @@
           :backSpeed="50"
           :loop="true"
           :contentType="'null'"
+          :showCursor="false"
           :strings="['< Développeur front-end />']"
         >
           <h2 class="typing"></h2>
@@ -53,7 +54,6 @@ export default {};
   text-align: center;
   margin: 0 auto;
   padding: 30px 5px 30px;
-  border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.8);
 
   @media screen and (min-width: 600px) {
@@ -88,6 +88,11 @@ export default {};
   h2 {
     font-size: 34px;
     font-weight: 400;
+    min-height: 92px;
+
+    @media screen and (min-width: 600px) {
+      min-height: 46px;
+    }
   }
 }
 </style>

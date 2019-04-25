@@ -81,7 +81,7 @@ html {
 
 .Menu {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
   bottom: 0;
