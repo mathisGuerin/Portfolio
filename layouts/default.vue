@@ -70,23 +70,20 @@ html {
   min-height: 100vh;
 }
 
-.Portfolio + .Menu,
-.Contact + .Menu,
-.Contact + .Menu {
+.Menu {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.Menu {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: #292929;
+  opacity: 1;
   color: white;
   text-align: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
+}
+
+.Portfolio + .Menu {
+  background-color: black;
+  opacity: 0.8;
 }
 
 .page-enter-active,

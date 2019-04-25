@@ -1,11 +1,11 @@
 <template>
   <div class="About">
     <div class="About-container">
+      <h1>A propos</h1>
       <div class="About-container-left">
         <img class="About-picture" src="../assets/MathisGuerin.jpg">
       </div>
       <div class="About-container-right">
-        <h1>A propos</h1>
         <h2>
           <span>Mathis Guérin,</span>
           <span>24 ans</span>
@@ -54,17 +54,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.2;
     background: url("../assets/bgPhotoAbout.jpeg");
     background-position: left 11% center;
     background-size: cover;
+
+    @media screen and (min-width: 1000px) {
+      opacity: 0.3;
+    }
   }
 
   h1 {
     font-size: 52px;
     line-height: 75px;
     font-weight: 700;
-    margin: 0px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     position: relative;
     width: fit-content;
@@ -81,6 +85,10 @@
     @media screen and (min-width: 600px) {
       font-size: 80px;
       line-height: 90px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 0;
     }
   }
 
@@ -131,6 +139,7 @@
 
   .About-container-right {
     display: inline-block;
+    vertical-align: top;
     width: 100%;
     @media screen and (min-width: 1000px) {
       width: 60%;
