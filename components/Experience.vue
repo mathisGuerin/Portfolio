@@ -123,6 +123,7 @@ export default {
     cursor: pointer;
     height: 40px;
     width: 40px;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

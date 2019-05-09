@@ -29,7 +29,7 @@ let skills = [
     color: '#5bb984',
     logo: require('../assets/vue.png'),
     description: [
-      "Vue.js est un framework front-end permettant la création d'interfaces utilisateurs. Vue.js dispose également de nombreux plugins permettant notemment de gérer le routing de l'application (Vue-router), la gestion du state (Vuex)...",
+      "Vue.js est un framework front-end permettant la création d'interfaces utilisateur. Vue.js dispose également de nombreux plugins permettant notamment de gérer le routing de l'application (Vue-router), la gestion du state (Vuex)...",
       "Il est également possible de faire du rendu côté serveur, en utilisant le framework Nuxt. Celui-ci inclut de nombreux plugins par default (Vuex, Vue-router...), et permet de créer des applications universelles, c'est à dire qui peuvent être rendues à la fois côté client et côté serveur.",
       "Je n'ai jamais utilisé Vue.js dans un cadre professionnel, mais j'ai créé plusieurs projets persos avec ce framework, dont ce portfolio, développé avec Nuxt."
     ]
