@@ -59,6 +59,12 @@ a {
   &:hover, &.nuxt-link-exact-active {
     background: rgba(0, 0, 0, 0.7);
   }
+
+  @media screen and (max-width: 700px) {
+    &.nuxt-link-exact-active {
+      color: #45afff;
+    }
+  }
 }
 </style>
 

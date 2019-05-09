@@ -16,8 +16,7 @@
           J'ai ensuite choisi de m'orienter vers le développement front-end.
         </div>
         <div class="About-description">
-          Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler sur un site grand public et de travailler
-          avec des technologies front-end récentes (React, Redux...).
+          Mon expérience chez iDVROOM (opérateur de covoiturage au quotidien) m'a permis de travailler avec des technologies front-end récentes (React, Redux...) sur un site grand public.
         </div>
         <div
           class="About-description"
@@ -42,10 +41,6 @@
   padding: 30px 30px 53px;
   background-color: #e7e7e7;
   color: #292929;
-
-  @media screen and (min-width: 600px) {
-    padding: 50px 50px 53px;
-  }
 
   &:before {
     content: "";
@@ -105,6 +100,7 @@
   .About-picture {
     display: block;
     height: 250px;
+    width: 250px;
     border-radius: 50%;
     border: 3px solid #444;
     margin: 0 auto;
