@@ -12,7 +12,7 @@
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="phone"/>
-        <h2><a href="tel:+667544316">06.67.54.43.16</a></h2>
+        <h2><a href="tel:+0667544316">06.67.54.43.16</a></h2>
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="at"/>
