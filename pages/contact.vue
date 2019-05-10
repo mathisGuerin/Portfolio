@@ -12,11 +12,11 @@
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="phone"/>
-        <h2>06.67.54.43.16</h2>
+        <h2><a href="tel:+667544316">06.67.54.43.16</a></h2>
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="at"/>
-        <h2>guerin.mathis@gmail.com</h2>
+        <h2><a href="mailto:guerin.mathis@gmail.com">guerin.mathis@gmail.com</a></h2>
       </div>
     </div>
     <div class="Contact-imgs">

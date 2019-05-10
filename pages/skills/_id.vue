@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss">
 .Skill-selected {
+  position: relative;
   width: fit-content;
   margin: 30px auto;
   cursor: pointer;

@@ -20,6 +20,11 @@ export default {
 </script> 
 
 <style lang="scss">
+  a {
+    text-decoration: none;
+    color: #292929;
+    -webkit-tap-highlight-color: transparent;
+  }
 .Skills-wrapper {
   margin: 20px auto;
   text-align: center;
