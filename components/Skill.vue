@@ -1,17 +1,19 @@
 <template>
-  <div class="Skill-wrapper" title="Cliquez pour voir plus de détails">
-    <vue-easy-pie-chart
-      :percent="this.skill.value"
-      :bar-color="this.skill.color"
-      track-color="#dedede"
-      scale-color="transparent"
-      :size="200"
-      :scale-length="10"
-      :line-width="8"
-    >
-      <img class="Skills-logo" :src="this.skill.logo">
-    </vue-easy-pie-chart>
-  </div>
+  <nuxt-link :to="'/skills/'+skill.name">
+    <div class="Skill-wrapper" title="Cliquez pour voir plus de détails">
+      <vue-easy-pie-chart
+        :percent="this.skill.value"
+        :bar-color="this.skill.color"
+        track-color="#dedede"
+        scale-color="transparent"
+        :size="200"
+        :scale-length="10"
+        :line-width="8"
+      >
+        <img class="Skills-logo" :src="this.skill.logo">
+      </vue-easy-pie-chart>
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -19,14 +21,16 @@ import VueEasyPieChart from "vue-easy-pie-chart";
 import "vue-easy-pie-chart/dist/vue-easy-pie-chart.css";
 
 export default {
-
   props: ["skill"],
-  computed: {},
   components: {VueEasyPieChart}
 };
 </script>
 
 <style lang="scss" scoped>
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .Skill-wrapper {
   display: inline-block;
