@@ -41,7 +41,8 @@ let skills = [
     color: '#e45699',
     logo: require('../assets/graphql.png'),
     description: [
-      "GraphQL est un langage de requête, permettant de récupérer des informations venant d'une API ou d'une base de données."
+      "GraphQL est un langage de requête, permettant de récupérer des informations venant d'une API ou d'une base de données.",
+      "J'ai eu l'occasion de travailler avec cette technologie sur un projet perso. Le client, créé avec React et la librairie React-apollo, récupérait les données venant d'un serveur web Node.js (framework Express), et pouvait également effectuer des mutations sur ces données."
     ]
   },
   {
@@ -51,7 +52,9 @@ let skills = [
     color: '#ef652c',
     logo: require('../assets/html.png'),
     description: [
-      "Le HTML est un langage permettant de structurer une page web."
+      "Le HTML est un langage permettant de structurer une page web.",
+      "Chez iDVROOM, j'ai notamment travailler avec le moteur de template Twig, qui permet de séparer la Vue du code PHP.",
+      "Twig permet d'inclure dans nos templates des variables PHP, d'effectuer des conditions, ou bien de déclarer des variables."
     ]
   },
   {
@@ -74,7 +77,8 @@ let skills = [
     color: '#73a763',
     logo: require('../assets/node.png'),
     description: [
-      "Node.js permet d'utiliser le Javascript pour créer un environnement côté serveur."
+      "Node.js permet d'utiliser le Javascript pour créer un environnement côté serveur.",
+      "Le framework Express offre plusieurs fonctionnalités permettant de créer plus rapidement une application en Node.js. J'ai utilisé ce framework pour créer un serveur web pouvant récupérer et modifier des données stockées dans une base MongoDB. "
     ]
   },
 ];
