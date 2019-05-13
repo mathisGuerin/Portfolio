@@ -22,11 +22,11 @@
           class="About-description"
         >Curieux et passionné, j'aime travailler sur des projets persos afin de me former sur d'autres technologies.</div>
       </div>
-      <div class="About-icons">
+<!--       <div class="About-icons">
         <img class="About-icon About-icon-bretagne" src="../assets/bretagne.jpg">
         <img class="About-icon" src="../assets/foot.png">
         <img class="About-icon" src="../assets/travel.png">
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

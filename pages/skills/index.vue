@@ -44,10 +44,6 @@ export default {
 .skills-leave-active,
 .skills-leave-to {
   animation: skillsOut 1s ease-in-out;
-
-  @media screen and (min-width: 1000px) {
-    top: -60px;
-  }
 }
 
 // Animation d'une compétence

@@ -69,7 +69,7 @@ export default {
       margin: 13px;
       width: 50%;
       max-width: 700px;
-      vertical-align: top;
+      vertical-align: middle;
       font-size: 18px;
     }
 
@@ -86,6 +86,7 @@ export default {
   @media screen and (min-width: 1000px) {
     display: inline-block;
     margin: 13px;
+    vertical-align: middle;
   }
 }
 
