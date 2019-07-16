@@ -8,7 +8,7 @@
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="home"/>
-        <h2>4 rue Gauvin, 49000 Angers</h2>
+        <h2>19 avenue Georges Clémenceau, 22400 Lamballe</h2>
       </div>
       <div class="Contact-item">
         <font-awesome-icon class="Contact-icon" icon="phone"/>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="Contact-imgs">
-      <a href="https://www.linkedin.com/in/mathis-gu%C3%A9rin-086939100/" target="_blank">
+      <a href="https://www.linkedin.com/in/mathisGuerin/" target="_blank">
         <img class="Contact-img" src="../assets/linkedin.svg">
       </a>
       <a href="https://github.com/mathisGuerin" target="_blank">
@@ -115,10 +115,9 @@ h2 {
   vertical-align: super;
   opacity: 0;
   font-size: 18px;
+  width: 77%;
 
-  @media screen and (min-width: 600px) {
-    font-size: 24px;
-  }
+
 }
 
 .Contact-icon {
@@ -129,6 +128,7 @@ h2 {
   padding: 7px;
   border-radius: 50%;
   color: white;
+  vertical-align: top;
 }
 
 @keyframes h2Anim {
