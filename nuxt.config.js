@@ -14,7 +14,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'Portfolio Mathis Guérin - Développeur front-end',
+        content: 'Portfolio Mathis Guérin - Développeur front-end - React - Vue.js - Javascript',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
