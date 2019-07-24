@@ -33,6 +33,20 @@
   </div>
 </template>
 
+<script>
+export default {
+  head () {
+    return {
+      title: 'About Us - Nuxt.js',
+      meta: [
+        { hid: 'robots', name: 'robots', content: 'noindex' }
+      ]
+    }
+  }
+}
+</script>
+
+
 <style lang="scss" scoped>
 .Contact {
   position: relative;
